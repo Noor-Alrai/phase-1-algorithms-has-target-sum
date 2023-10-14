@@ -1,6 +1,6 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-  let k = 1;
+  /*let k = 1;
   for( let i = 0 ; i < array.length < 2 ; i ++){
   const j = array.length - 1 -i ;
   if( i == j ) break;
@@ -13,7 +13,18 @@ function hasTargetSum(array, target) {
   }
   return false
 
-
+*/
+for(let i = 0 ; i < array.length ;i++){
+  const complement = target - array[i] ;
+  for(let j = i+1 ; j <array.length ; j++){
+    console.log([array[i] , array[j]])
+    if(array[j] === complement){
+ 
+      return true
+    }
+  }
+}
+return false;
 }
 
 /* 
@@ -46,4 +57,4 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
-console.log(hasTargetSum([1, 2, 5], 4));
+console.log(hasTargetSum([22, 19, 4, 6, 30], 25));
