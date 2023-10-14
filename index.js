@@ -1,5 +1,19 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let k = 1;
+  for( let i = 0 ; i < array.length < 2 ; i ++){
+  const j = array.length - 1 -i ;
+  if( i == j ) break;
+   let firstElement = array[i];
+   let lastElement =array[j];
+   if( firstElement + lastElement === target){
+    console.log([firstElement , lastElement])
+    return true
+   } 
+  }
+  return false
+
+
 }
 
 /* 
@@ -32,3 +46,4 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
+console.log(hasTargetSum([1, 2, 5], 4));
